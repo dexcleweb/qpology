@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorry Kavya - Dil ki Baat</title>
-    <meta name="description" content="A heartfelt apology for Kavya">
+    <title>Enhanced Romantic Apology Website with Advanced Animations</title>
+    <meta name="description" content="A heartfelt apology for Kavya with stunning animations">
     <link
-        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <style>
         * {
@@ -18,16 +18,76 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            background: #0f0f23;
+            background: #0a0a0a;
             overflow-x: hidden;
+            cursor: none;
         }
 
         .font-dancing {
             font-family: 'Dancing Script', cursive;
         }
 
+        .font-great-vibes {
+            font-family: 'Great Vibes', cursive;
+        }
+
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Custom Cursor */
+        .cursor {
+            position: fixed;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #ff6b9d, #c44cf0);
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+            box-shadow: 0 0 20px rgba(255, 107, 157, 0.6);
+        }
+
+        .cursor::after {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 40px;
+            height: 40px;
+            border: 2px solid rgba(255, 107, 157, 0.3);
+            border-radius: 50%;
+            animation: cursor-pulse 2s infinite;
+        }
+
+        @keyframes cursor-pulse {
+            0% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
         /* Enhanced Animations */
-        @keyframes float-0 {
+        @keyframes aurora {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes floating {
 
             0%,
             100% {
@@ -35,7 +95,7 @@
             }
 
             33% {
-                transform: translateY(-25px) rotate(120deg);
+                transform: translateY(-30px) rotate(120deg);
             }
 
             66% {
@@ -43,65 +103,122 @@
             }
         }
 
-        @keyframes float-1 {
+        @keyframes magical-float {
 
             0%,
             100% {
-                transform: translateY(0px) rotate(0deg);
+                transform: translateY(0px) scale(1) rotate(0deg);
             }
 
             50% {
-                transform: translateY(-35px) rotate(180deg);
+                transform: translateY(-40px) scale(1.1) rotate(180deg);
             }
         }
 
-        @keyframes float-2 {
+        @keyframes sparkle-dance {
 
             0%,
             100% {
-                transform: translateY(0px) rotate(0deg);
+                opacity: 0.3;
+                transform: scale(0.8) rotate(0deg);
             }
 
             25% {
-                transform: translateY(-20px) rotate(90deg);
+                opacity: 1;
+                transform: scale(1.2) rotate(90deg);
+            }
+
+            50% {
+                opacity: 0.7;
+                transform: scale(1.5) rotate(180deg);
             }
 
             75% {
-                transform: translateY(-30px) rotate(270deg);
-            }
-        }
-
-        @keyframes twinkle {
-
-            0%,
-            100% {
-                opacity: 0.2;
-                transform: scale(0.5) rotate(0deg);
-            }
-
-            50% {
                 opacity: 1;
-                transform: scale(1.3) rotate(180deg);
+                transform: scale(1.1) rotate(270deg);
             }
         }
 
-        @keyframes sparkle {
-
-            0%,
-            100% {
-                opacity: 0;
-                transform: scale(0) rotate(0deg);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scale(1.5) rotate(360deg);
-            }
-        }
-
-        @keyframes shooting-star {
+        @keyframes galaxy-spin {
             0% {
-                transform: translateX(-100px) translateY(-100px) rotate(45deg);
+                transform: rotate(0deg) scale(1);
+            }
+
+            50% {
+                transform: rotate(180deg) scale(1.1);
+            }
+
+            100% {
+                transform: rotate(360deg) scale(1);
+            }
+        }
+
+        @keyframes text-glow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 20px rgba(255, 107, 157, 0.6);
+            }
+
+            50% {
+                text-shadow:
+                    0 0 30px rgba(255, 107, 157, 0.8),
+                    0 0 40px rgba(196, 76, 240, 0.6),
+                    0 0 60px rgba(255, 215, 0, 0.4);
+            }
+        }
+
+        @keyframes rainbow-text {
+            0% {
+                color: #ff6b9d;
+            }
+
+            14% {
+                color: #ff8a65;
+            }
+
+            28% {
+                color: #ffd54f;
+            }
+
+            42% {
+                color: #81c784;
+            }
+
+            57% {
+                color: #4fc3f7;
+            }
+
+            71% {
+                color: #ba68c8;
+            }
+
+            85% {
+                color: #f06292;
+            }
+
+            100% {
+                color: #ff6b9d;
+            }
+        }
+
+        @keyframes morphing-bg {
+            0% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            }
+
+            50% {
+                border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+            }
+
+            100% {
+                border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            }
+        }
+
+        @keyframes particle-flow {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
                 opacity: 0;
             }
 
@@ -114,173 +231,77 @@
             }
 
             100% {
-                transform: translateX(100vw) translateY(100vh) rotate(45deg);
+                transform: translateY(-100vh) rotate(360deg);
                 opacity: 0;
             }
         }
 
-        @keyframes magic-sparkle {
-
-            0%,
-            100% {
-                opacity: 0;
-                transform: scale(0) rotate(0deg);
-            }
-
-            25% {
-                opacity: 0.7;
-                transform: scale(1) rotate(90deg);
-            }
-
-            50% {
-                opacity: 1;
-                transform: scale(1.2) rotate(180deg);
-            }
-
-            75% {
-                opacity: 0.7;
-                transform: scale(1) rotate(270deg);
-            }
-        }
-
-        @keyframes glow {
-
-            0%,
-            100% {
-                text-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
-            }
-
-            50% {
-                text-shadow: 0 0 30px rgba(236, 72, 153, 0.8), 0 0 40px rgba(147, 51, 234, 0.5), 0 0 60px rgba(251, 191, 36, 0.3);
-            }
-        }
-
-        @keyframes heartbeat {
+        @keyframes heart-beat {
 
             0%,
             100% {
                 transform: scale(1);
             }
 
-            14% {
+            10% {
                 transform: scale(1.1);
-            }
-
-            28% {
-                transform: scale(1);
-            }
-
-            42% {
-                transform: scale(1.1);
-            }
-
-            70% {
-                transform: scale(1);
-            }
-        }
-
-        @keyframes spin-slow {
-            from {
-                transform: rotate(0deg);
-            }
-
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        @keyframes fade-in-up {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.7;
-            }
-        }
-
-        @keyframes rainbow-glow {
-            0% {
-                text-shadow: 0 0 20px #ff0080;
             }
 
             20% {
-                text-shadow: 0 0 20px #ff8000;
+                transform: scale(1);
+            }
+
+            30% {
+                transform: scale(1.1);
             }
 
             40% {
-                text-shadow: 0 0 20px #ffff00;
-            }
-
-            60% {
-                text-shadow: 0 0 20px #80ff00;
-            }
-
-            80% {
-                text-shadow: 0 0 20px #0080ff;
-            }
-
-            100% {
-                text-shadow: 0 0 20px #8000ff;
+                transform: scale(1);
             }
         }
 
-        @keyframes button-magic {
+        @keyframes slide-in-elegant {
             0% {
-                transform: scale(1) rotate(0deg);
-                box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
-            }
-
-            50% {
-                transform: scale(1.05) rotate(1deg);
-                box-shadow: 0 0 30px rgba(236, 72, 153, 0.8), 0 0 40px rgba(147, 51, 234, 0.5);
-            }
-
-            100% {
-                transform: scale(1) rotate(0deg);
-                box-shadow: 0 0 20px rgba(236, 72, 153, 0.5);
-            }
-        }
-
-        @keyframes floating-up {
-            0% {
-                transform: translateY(0px) rotate(0deg);
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(-200px) rotate(360deg);
                 opacity: 0;
+                transform: translateY(60px) scale(0.9);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
             }
         }
 
-        @keyframes burst {
+        @keyframes magical-reveal {
             0% {
-                transform: scale(0);
+                opacity: 0;
+                transform: scale(0.8) rotateY(90deg);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: scale(1.05) rotateY(45deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1) rotateY(0deg);
+            }
+        }
+
+        @keyframes love-burst {
+            0% {
+                transform: scale(0) rotate(0deg);
                 opacity: 1;
             }
 
             50% {
-                transform: scale(1.2);
-                opacity: 0.8;
+                transform: scale(1.5) rotate(180deg);
+                opacity: 0.7;
             }
 
             100% {
-                transform: scale(2);
+                transform: scale(3) rotate(360deg);
                 opacity: 0;
             }
         }
@@ -304,197 +325,79 @@
 
             51%,
             100% {
-                border-color: #fbb6ce;
+                border-color: #ff6b9d;
             }
         }
 
-        /* Animation classes */
-        .animate-float-0 {
-            animation: float-0 3s ease-in-out infinite;
-        }
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
 
-        .animate-float-1 {
-            animation: float-1 2.5s ease-in-out infinite;
-        }
-
-        .animate-float-2 {
-            animation: float-2 3.5s ease-in-out infinite;
-        }
-
-        .animate-twinkle {
-            animation: twinkle 2s ease-in-out infinite;
-        }
-
-        .animate-sparkle {
-            animation: sparkle 1.5s ease-in-out infinite;
-        }
-
-        .animate-magic-sparkle {
-            animation: magic-sparkle 2.5s ease-in-out infinite;
-        }
-
-        .animate-shooting-star {
-            animation: shooting-star 3s linear infinite;
-        }
-
-        .animate-glow {
-            animation: glow 3s ease-in-out infinite;
-        }
-
-        .animate-rainbow-glow {
-            animation: rainbow-glow 3s linear infinite;
-        }
-
-        .animate-heartbeat {
-            animation: heartbeat 2s ease-in-out infinite;
-        }
-
-        .animate-spin-slow {
-            animation: spin-slow 8s linear infinite;
-        }
-
-        .animate-fade-in-up {
-            animation: fade-in-up 1s ease-out forwards;
-        }
-
-        .animate-pulse {
-            animation: pulse 2s ease-in-out infinite;
-        }
-
-        .animate-button-magic {
-            animation: button-magic 2s ease-in-out infinite;
-        }
-
-        .animate-floating-up {
-            animation: floating-up 2s ease-out forwards;
-        }
-
-        .animate-burst {
-            animation: burst 1s ease-out forwards;
-        }
-
-        .delay-100 {
-            animation-delay: 0.1s;
-        }
-
-        .delay-200 {
-            animation-delay: 0.2s;
-        }
-
-        .delay-300 {
-            animation-delay: 0.3s;
-        }
-
-        .delay-400 {
-            animation-delay: 0.4s;
-        }
-
-        .delay-500 {
-            animation-delay: 0.5s;
-        }
-
-        .delay-1000 {
-            animation-delay: 1s;
-        }
-
-        .delay-1500 {
-            animation-delay: 1.5s;
-        }
-
-        .delay-2000 {
-            animation-delay: 2s;
+            100% {
+                transform: scale(4);
+                opacity: 0;
+            }
         }
 
         /* Main container */
         .main-container {
             min-height: 100vh;
-            background: linear-gradient(135deg, #581c87 0%, #be185d 50%, #be123c 100%);
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a1a 25%, #0a1a1a 50%, #1a0a0a 75%, #0a0a0a 100%);
+            background-size: 400% 400%;
+            animation: aurora 20s ease infinite;
             position: relative;
             overflow: hidden;
         }
 
-        /* Floating elements */
-        .floating-hearts {
+        /* Aurora Background */
+        .aurora-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg,
+                    rgba(255, 107, 157, 0.1) 0%,
+                    rgba(196, 76, 240, 0.1) 25%,
+                    rgba(79, 195, 247, 0.1) 50%,
+                    rgba(129, 199, 132, 0.1) 75%,
+                    rgba(255, 107, 157, 0.1) 100%);
+            background-size: 400% 400%;
+            animation: aurora 15s ease infinite;
+            z-index: 1;
+        }
+
+        /* Floating particles */
+        .floating-particles {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             pointer-events: none;
-            overflow: hidden;
-            z-index: 1;
+            z-index: 2;
         }
 
-        .floating-sparkles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .shooting-stars {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .magic-particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        .heart,
-        .star,
-        .shooting-star,
-        .magic-particle {
+        .particle {
             position: absolute;
-            color: rgba(236, 72, 153, 0.3);
+            animation: particle-flow 10s linear infinite;
         }
 
-        .star {
-            color: rgba(251, 191, 36, 0.4);
+        .particle-heart {
+            color: rgba(255, 107, 157, 0.6);
+            animation: floating 4s ease-in-out infinite;
         }
 
-        .shooting-star {
-            color: rgba(147, 51, 234, 0.6);
+        .particle-star {
+            color: rgba(255, 215, 0, 0.7);
+            animation: sparkle-dance 3s ease-in-out infinite;
         }
 
-        .magic-particle {
-            color: rgba(251, 191, 36, 0.7);
-        }
-
-        /* Background animation */
-        .animated-bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.2;
-            z-index: 0;
-        }
-
-        .animated-bg::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, #ec4899, #8b5cf6);
-            animation: pulse 3s ease-in-out infinite;
+        .particle-diamond {
+            color: rgba(79, 195, 247, 0.5);
+            animation: magical-float 3.5s ease-in-out infinite;
         }
 
         /* Content container */
@@ -509,59 +412,65 @@
         /* Header section */
         .header {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 6rem;
             opacity: 0;
-            transform: translateY(40px);
-            transition: all 2s ease-out;
-        }
-
-        .header.visible {
-            opacity: 1;
-            transform: translateY(0);
+            transform: translateY(60px);
+            animation: slide-in-elegant 2s ease-out forwards;
         }
 
         .main-title {
-            font-size: 4rem;
-            font-weight: bold;
-            background: linear-gradient(45deg, #fbb6ce, #c084fc, #a5b4fc);
+            font-family: 'Great Vibes', cursive;
+            font-size: 6rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #ff6b9d, #c44cf0, #4fc3f7, #ffd54f);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 1.5rem;
-            animation: glow 3s ease-in-out infinite;
+            margin-bottom: 2rem;
+            animation: text-glow 3s ease-in-out infinite;
+            position: relative;
+        }
+
+        .main-title::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: linear-gradient(45deg, rgba(255, 107, 157, 0.2), rgba(196, 76, 240, 0.2));
+            border-radius: 50%;
+            animation: morphing-bg 8s ease-in-out infinite;
+            z-index: -1;
         }
 
         .subtitle {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 1rem;
-            margin-bottom: 2rem;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            font-family: 'Playfair Display', serif;
         }
 
         .subtitle-text {
-            font-size: 1.5rem;
-            color: #fbb6ce;
-            font-weight: 300;
+            font-size: 2rem;
+            color: #ff6b9d;
+            font-weight: 400;
+            animation: rainbow-text 5s linear infinite;
         }
 
         .heart-icon {
-            color: #f472b6;
-            animation: pulse 2s ease-in-out infinite;
+            animation: heart-beat 2s ease-in-out infinite;
         }
 
         /* Photo section */
         .photo-section {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 6rem;
             opacity: 0;
-            transform: translateY(40px);
-            transition: all 2s ease-out 0.5s;
-        }
-
-        .photo-section.visible {
-            opacity: 1;
-            transform: translateY(0);
+            transform: translateY(60px);
+            animation: slide-in-elegant 2s ease-out 0.5s forwards;
         }
 
         .photo-container {
@@ -570,81 +479,101 @@
         }
 
         .photo-frame {
-            width: 20rem;
-            height: 20rem;
+            width: 24rem;
+            height: 24rem;
             border-radius: 50%;
-            background: linear-gradient(45deg, #f472b6, #8b5cf6);
-            padding: 4px;
-            animation: spin-slow 8s linear infinite;
+            background: linear-gradient(45deg, #ff6b9d, #c44cf0, #4fc3f7, #ffd54f);
+            padding: 8px;
+            animation: galaxy-spin 12s linear infinite;
             position: relative;
+            overflow: hidden;
         }
 
         .photo-frame::before {
             content: '';
             position: absolute;
-            top: -10px;
-            left: -10px;
-            right: -10px;
-            bottom: -10px;
-            background: linear-gradient(45deg, #fbbf24, #f472b6, #8b5cf6, #fbbf24);
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            background: linear-gradient(45deg, rgba(255, 107, 157, 0.3), rgba(196, 76, 240, 0.3));
             border-radius: 50%;
+            animation: galaxy-spin 15s linear infinite reverse;
             z-index: -1;
-            animation: spin-slow 10s linear infinite reverse;
-            opacity: 0.7;
+        }
+
+        .photo-frame::after {
+            content: '';
+            position: absolute;
+            top: -40px;
+            left: -40px;
+            right: -40px;
+            bottom: -40px;
+            background: linear-gradient(45deg, rgba(79, 195, 247, 0.2), rgba(255, 215, 0, 0.2));
+            border-radius: 50%;
+            animation: galaxy-spin 20s linear infinite;
+            z-index: -2;
         }
 
         .photo-inner {
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+            background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
             display: flex;
             align-items: center;
             justify-content: center;
             overflow: hidden;
+            position: relative;
         }
 
-        .photo-placeholder {
-            text-align: center;
-            padding: 2rem;
-            color: #6b7280;
+        .photo-inner img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
         }
 
-        .photo-placeholder svg {
-            margin: 0 auto 1rem;
-            color: #f472b6;
+        .photo-inner:hover img {
+            transform: scale(1.1);
         }
 
-        .sparkle-icon {
+        .floating-hearts-around {
             position: absolute;
-            top: -1rem;
-            right: -1rem;
-            color: #fbbf24;
-            animation: heartbeat 2s ease-in-out infinite;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30rem;
+            height: 30rem;
+            pointer-events: none;
+        }
+
+        .floating-heart {
+            position: absolute;
+            color: #ff6b9d;
+            animation: floating 3s ease-in-out infinite;
         }
 
         /* Shayari section */
         .shayari-section {
-            max-width: 64rem;
-            margin: 0 auto 4rem;
+            max-width: 80rem;
+            margin: 0 auto 6rem;
             text-align: center;
             opacity: 0;
-            transform: translateY(40px);
-            transition: all 2s ease-out 1s;
-        }
-
-        .shayari-section.visible {
-            opacity: 1;
-            transform: translateY(0);
+            transform: translateY(60px);
+            animation: slide-in-elegant 2s ease-out 1s forwards;
         }
 
         .shayari-container {
-            background: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-            border-radius: 1.5rem;
-            padding: 3rem 2rem;
-            border: 1px solid rgba(236, 72, 153, 0.2);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(20px);
+            border-radius: 2rem;
+            padding: 4rem 3rem;
+            border: 2px solid rgba(255, 107, 157, 0.3);
+            box-shadow:
+                0 25px 50px -12px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
         }
@@ -656,53 +585,81 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, rgba(236, 72, 153, 0.1), rgba(147, 51, 234, 0.1));
+            background: linear-gradient(45deg,
+                    rgba(255, 107, 157, 0.1),
+                    rgba(196, 76, 240, 0.1),
+                    rgba(79, 195, 247, 0.1));
+            animation: morphing-bg 10s ease-in-out infinite;
             z-index: -1;
         }
 
         .shayari-title {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #fbb6ce;
-            margin-bottom: 2rem;
-            animation: rainbow-glow 5s linear infinite;
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #ff6b9d;
+            margin-bottom: 3rem;
+            animation: text-glow 4s ease-in-out infinite;
         }
 
         .shayari-text {
-            font-size: 1.125rem;
-            line-height: 1.75;
+            font-size: 1.25rem;
+            line-height: 2;
             color: #fbb6ce;
             font-weight: 300;
         }
 
         .shayari-line {
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             opacity: 0;
-            transform: translateY(20px);
-            animation: fade-in-up 1s ease-out forwards;
+            transform: translateY(30px);
+            animation: slide-in-elegant 1.5s ease-out forwards;
+            position: relative;
+        }
+
+        .shayari-line::before {
+            content: '💕';
+            position: absolute;
+            left: -2rem;
+            top: 0;
+            animation: heart-beat 2s ease-in-out infinite;
+        }
+
+        .shayari-line:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .shayari-line:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        .shayari-line:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        .shayari-line:nth-child(4) {
+            animation-delay: 0.8s;
         }
 
         /* Apology section */
         .apology-section {
             text-align: center;
-            margin-bottom: 4rem;
+            margin-bottom: 6rem;
             opacity: 0;
-            transform: translateY(40px);
-            transition: all 2s ease-out 1.5s;
-        }
-
-        .apology-section.visible {
-            opacity: 1;
-            transform: translateY(0);
+            transform: translateY(60px);
+            animation: slide-in-elegant 2s ease-out 1.5s forwards;
         }
 
         .apology-container {
-            background: linear-gradient(45deg, rgba(236, 72, 153, 0.2), rgba(147, 51, 234, 0.2));
-            backdrop-filter: blur(10px);
-            border-radius: 1rem;
-            padding: 3rem 2rem;
-            border: 1px solid rgba(244, 114, 182, 0.3);
-            max-width: 48rem;
+            background: linear-gradient(45deg,
+                    rgba(255, 107, 157, 0.2),
+                    rgba(196, 76, 240, 0.2),
+                    rgba(79, 195, 247, 0.2));
+            backdrop-filter: blur(20px);
+            border-radius: 2rem;
+            padding: 4rem 3rem;
+            border: 2px solid rgba(196, 76, 240, 0.4);
+            max-width: 60rem;
             margin: 0 auto;
             position: relative;
             overflow: hidden;
@@ -715,57 +672,110 @@
             left: -50%;
             width: 200%;
             height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(251, 191, 36, 0.1), transparent);
-            animation: spin-slow 15s linear infinite;
+            background: linear-gradient(45deg,
+                    transparent,
+                    rgba(255, 215, 0, 0.1),
+                    transparent);
+            animation: galaxy-spin 20s linear infinite;
             z-index: -1;
         }
 
         .apology-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #fbb6ce;
-            margin-bottom: 1.5rem;
-            animation: glow 3s ease-in-out infinite;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #ff6b9d;
+            margin-bottom: 2rem;
+            animation: text-glow 3s ease-in-out infinite;
         }
 
         .apology-text {
-            font-size: 1.125rem;
+            font-size: 1.25rem;
             color: #fbb6ce;
-            line-height: 1.75;
-            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
         }
 
         .apology-highlight {
-            font-size: 1.25rem;
-            color: #fbb6ce;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            color: #ffd54f;
             font-weight: 600;
+            animation: rainbow-text 6s linear infinite;
         }
 
-        /* Final message */
+        /* Enhanced Final Message */
         .final-message {
             text-align: center;
             opacity: 0;
-            transform: translateY(40px);
-            transition: all 2s ease-out 2s;
+            transform: translateY(60px);
+            animation: slide-in-elegant 2s ease-out 2s forwards;
+            margin-bottom: 4rem;
         }
 
-        .final-message.visible {
-            opacity: 1;
-            transform: translateY(0);
+        .forever-section {
+            background: linear-gradient(135deg,
+                    rgba(255, 107, 157, 0.15),
+                    rgba(196, 76, 240, 0.15),
+                    rgba(79, 195, 247, 0.15));
+            backdrop-filter: blur(30px);
+            border-radius: 3rem;
+            padding: 4rem 3rem;
+            border: 2px solid rgba(255, 107, 157, 0.4);
+            position: relative;
+            overflow: hidden;
+            max-width: 70rem;
+            margin: 0 auto;
+        }
+
+        .forever-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg,
+                    rgba(255, 107, 157, 0.1),
+                    rgba(196, 76, 240, 0.1),
+                    rgba(79, 195, 247, 0.1),
+                    rgba(255, 215, 0, 0.1));
+            animation: morphing-bg 12s ease-in-out infinite;
+            z-index: -1;
+        }
+
+        .forever-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #ff6b9d;
+            margin-bottom: 2rem;
+            animation: text-glow 4s ease-in-out infinite;
+        }
+
+        .forever-text {
+            font-size: 1.25rem;
+            color: #fbb6ce;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            font-weight: 300;
         }
 
         .final-button {
             display: inline-flex;
             align-items: center;
             gap: 1rem;
-            background: linear-gradient(45deg, #ec4899, #8b5cf6);
-            padding: 1rem 2rem;
-            border-radius: 9999px;
+            background: linear-gradient(45deg, #ff6b9d, #c44cf0, #4fc3f7);
+            background-size: 300% 300%;
+            animation: aurora 3s ease infinite;
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
             color: white;
-            font-weight: 600;
-            font-size: 1.125rem;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.25);
-            animation: button-magic 2s ease-in-out infinite;
+            font-weight: 700;
+            font-size: 1.25rem;
+            box-shadow:
+                0 15px 35px -5px rgba(255, 107, 157, 0.4),
+                0 8px 20px -5px rgba(196, 76, 240, 0.3);
             text-decoration: none;
             border: none;
             cursor: pointer;
@@ -781,7 +791,10 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            background: linear-gradient(90deg,
+                    transparent,
+                    rgba(255, 255, 255, 0.4),
+                    transparent);
             transition: left 0.5s ease;
         }
 
@@ -790,29 +803,54 @@
         }
 
         .final-button:hover {
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow:
+                0 25px 50px -5px rgba(255, 107, 157, 0.6),
+                0 15px 30px -5px rgba(196, 76, 240, 0.4);
         }
 
-        /* Love message display */
+        .final-button:active {
+            transform: translateY(-2px) scale(1.02);
+        }
+
+        /* Enhanced Love Message Modal */
         .love-message {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.9);
-            backdrop-filter: blur(20px);
-            border-radius: 2rem;
-            padding: 3rem;
-            max-width: 80%;
-            max-height: 80%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(30px);
+            border-radius: 3rem;
+            padding: 4rem;
+            max-width: 90%;
+            max-height: 90%;
             overflow-y: auto;
             z-index: 1000;
-            border: 2px solid rgba(236, 72, 153, 0.5);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 3px solid rgba(255, 107, 157, 0.6);
+            box-shadow:
+                0 50px 100px -20px rgba(0, 0, 0, 0.8),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
             opacity: 0;
-            transform: translate(-50%, -50%) scale(0.8);
-            transition: all 0.5s ease;
+            transform: translate(-50%, -50%) scale(0.7);
+            transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .love-message::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg,
+                    rgba(255, 107, 157, 0.1),
+                    rgba(196, 76, 240, 0.1),
+                    rgba(79, 195, 247, 0.1));
+            animation: morphing-bg 12s ease-in-out infinite;
+            z-index: -1;
         }
 
         .love-message.show {
@@ -823,52 +861,151 @@
         .love-message-content {
             text-align: center;
             color: #fbb6ce;
+            position: relative;
+            z-index: 1;
         }
 
         .love-message-title {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 2rem;
-            animation: rainbow-glow 3s linear infinite;
+            font-family: 'Great Vibes', cursive;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            animation: text-glow 4s ease-in-out infinite;
+            background: linear-gradient(45deg, #ff6b9d, #c44cf0, #4fc3f7, #ffd54f);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .love-message-text {
-            font-size: 1.125rem;
-            line-height: 1.75;
-            margin-bottom: 1.5rem;
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
             opacity: 0;
-            transform: translateY(20px);
-            animation: fade-in-up 1s ease-out forwards;
+            transform: translateY(30px);
+            animation: slide-in-elegant 1.5s ease-out forwards;
+        }
+
+        .love-message-text:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .love-message-text:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        .love-message-text:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+
+        .love-message-text:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+
+        .love-message-text:nth-child(6) {
+            animation-delay: 1s;
         }
 
         .typewriter-text {
             font-family: 'Dancing Script', cursive;
-            font-size: 1.5rem;
-            color: #fbbf24;
-            border-right: 2px solid #fbb6ce;
+            font-size: 2rem;
+            color: #ffd54f;
+            border-right: 3px solid #ff6b9d;
             white-space: nowrap;
             overflow: hidden;
-            margin: 2rem 0;
-            animation: typewriter 3s steps(40) 1s forwards, blink 0.5s step-end infinite;
+            margin: 3rem 0;
+            animation: typewriter 4s steps(40) 1s forwards, blink 1s step-end infinite;
+        }
+
+        .promise-section {
+            background: linear-gradient(45deg,
+                    rgba(255, 107, 157, 0.2),
+                    rgba(196, 76, 240, 0.2));
+            border-radius: 2rem;
+            padding: 3rem;
+            margin: 3rem 0;
+            border: 2px solid rgba(255, 107, 157, 0.3);
+        }
+
+        .promise-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #ff6b9d;
+            margin-bottom: 2rem;
+            animation: text-glow 3s ease-in-out infinite;
+        }
+
+        .promise-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .promise-item {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 1rem;
+            border-left: 4px solid #ff6b9d;
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slide-in-elegant 1s ease-out forwards;
+        }
+
+        .promise-item:nth-child(1) {
+            animation-delay: 1.2s;
+        }
+
+        .promise-item:nth-child(2) {
+            animation-delay: 1.4s;
+        }
+
+        .promise-item:nth-child(3) {
+            animation-delay: 1.6s;
+        }
+
+        .promise-item:nth-child(4) {
+            animation-delay: 1.8s;
+        }
+
+        .promise-item:nth-child(5) {
+            animation-delay: 2s;
         }
 
         .close-button {
             position: absolute;
-            top: 1rem;
-            right: 1rem;
-            background: none;
+            top: 2rem;
+            right: 2rem;
+            background: linear-gradient(45deg, #ff6b9d, #c44cf0);
             border: none;
-            color: #fbb6ce;
-            font-size: 2rem;
+            color: white;
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
             cursor: pointer;
-            transition: color 0.3s ease;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .close-button:hover {
-            color: #f472b6;
+            transform: scale(1.1) rotate(90deg);
+            box-shadow: 0 10px 20px rgba(255, 107, 157, 0.5);
         }
 
-        /* Burst effect */
+        /* Ripple effect */
+        .ripple {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 107, 157, 0.6);
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            pointer-events: none;
+        }
+
+        /* Burst particles */
         .burst-container {
             position: fixed;
             top: 0;
@@ -881,102 +1018,96 @@
 
         .burst-particle {
             position: absolute;
-            width: 10px;
-            height: 10px;
-            background: #fbbf24;
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
-            animation: burst 1s ease-out forwards;
+            animation: love-burst 1.5s ease-out forwards;
         }
 
         /* Responsive design */
         @media (max-width: 768px) {
             .main-title {
-                font-size: 3rem;
+                font-size: 4rem;
             }
 
             .subtitle-text {
-                font-size: 1.25rem;
+                font-size: 1.5rem;
             }
 
             .photo-frame {
-                width: 16rem;
-                height: 16rem;
+                width: 18rem;
+                height: 18rem;
             }
 
             .shayari-container,
             .apology-container {
-                padding: 2rem 1rem;
+                padding: 2rem 1.5rem;
             }
 
             .apology-title {
-                font-size: 2rem;
-            }
-
-            .content {
-                padding: 1rem;
+                font-size: 2.5rem;
             }
 
             .love-message {
                 padding: 2rem;
-                max-width: 90%;
+                max-width: 95%;
             }
 
             .love-message-title {
-                font-size: 2rem;
+                font-size: 2.5rem;
+            }
+
+            .promise-section {
+                padding: 2rem;
             }
         }
 
         /* Custom scrollbar */
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 12px;
         }
 
         ::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.1);
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(45deg, #ec4899, #8b5cf6);
-            border-radius: 4px;
+            background: linear-gradient(45deg, #ff6b9d, #c44cf0);
+            border-radius: 6px;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background: linear-gradient(45deg, #db2777, #7c3aed);
+            background: linear-gradient(45deg, #e55a8a, #b03de0);
         }
     </style>
 </head>
 
 <body>
+    <div class="cursor" id="cursor"></div>
+
     <div class="main-container">
-        <!-- Floating Hearts -->
-        <div class="floating-hearts" id="floatingHearts"></div>
+        <div class="aurora-bg"></div>
 
-        <!-- Floating Sparkles -->
-        <div class="floating-sparkles" id="floatingSparkles"></div>
-
-        <!-- Shooting Stars -->
-        <div class="shooting-stars" id="shootingStars"></div>
-
-        <!-- Magic Particles -->
-        <div class="magic-particles" id="magicParticles"></div>
+        <!-- Floating Particles -->
+        <div class="floating-particles" id="floatingParticles"></div>
 
         <!-- Burst Container -->
         <div class="burst-container" id="burstContainer"></div>
 
-        <!-- Animated Background -->
-        <div class="animated-bg"></div>
-
         <div class="content">
             <!-- Header Section -->
-            <div class="header" id="header">
+            <div class="header">
                 <h1 class="main-title">Kavya</h1>
                 <div class="subtitle">
-                    <svg class="heart-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <svg class="heart-icon" width="40" height="40" viewBox="0 0 24 24" fill="currentColor"
+                        style="color: #ff6b9d;">
                         <path
                             d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
                     </svg>
                     <p class="subtitle-text">Meri Jaan, Meri Duniya</p>
-                    <svg class="heart-icon" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                    <svg class="heart-icon" width="40" height="40" viewBox="0 0 24 24" fill="currentColor"
+                        style="color: #ff6b9d;">
                         <path
                             d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
                     </svg>
@@ -984,7 +1115,7 @@
             </div>
 
             <!-- Photo Section -->
-            <div class="photo-section" id="photoSection">
+            <div class="photo-section">
                 <div class="photo-container">
                     <div class="photo-frame">
                         <div class="photo-inner">
@@ -993,33 +1124,53 @@
                         </div>
 
                     </div>
-                    <div class="sparkle-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <polygon
-                                points="12 2 15.09 8.26 22 9 17 14.74 18.18 21.02 12 17.77 5.82 21.02 7 14.74 2 9 8.91 8.26 12 2" />
-                        </svg>
+                    <div class="floating-hearts-around">
+                        <div class="floating-heart" style="top: 10%; left: 10%;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </div>
+                        <div class="floating-heart" style="top: 20%; right: 15%;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </div>
+                        <div class="floating-heart" style="bottom: 20%; left: 15%;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </div>
+                        <div class="floating-heart" style="bottom: 10%; right: 10%;">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- Shayari Section -->
-            <div class="shayari-section" id="shayariSection">
+            <div class="shayari-section">
                 <div class="shayari-container">
                     <h2 class="shayari-title">Dil ki Baat</h2>
                     <div class="shayari-text">
-                        <p class="shayari-line delay-100">
+                        <p class="shayari-line">
                             "Kavya meri jaan, maine kiya hai galti bada,<br />
                             Tere dil ko dukh diya, yeh gham hai sara."
                         </p>
-                        <p class="shayari-line delay-200">
+                        <p class="shayari-line">
                             "Tere bina adhoora hun, tere bina kuch nahi,<br />
                             Sorry kehna chhota hai, par aur kuch samjh nahi."
                         </p>
-                        <p class="shayari-line delay-300">
+                        <p class="shayari-line">
                             "Please forgive me baby, main hoon bahut guilty,<br />
                             Tujhse pyar karta hun, this love is so deeply."
                         </p>
-                        <p class="shayari-line delay-400">
+                        <p class="shayari-line">
                             "Maaf kar de mujhko, I promise to be better,<br />
                             Tu hai meri zindagi, you make my days brighter."
                         </p>
@@ -1028,7 +1179,7 @@
             </div>
 
             <!-- Apology Message -->
-            <div class="apology-section" id="apologySection">
+            <div class="apology-section">
                 <div class="apology-container">
                     <h2 class="apology-title">I'm Sorry Kavya</h2>
                     <p class="apology-text">
@@ -1042,145 +1193,156 @@
                 </div>
             </div>
 
-            <!-- Final Message -->
-            <div class="final-message" id="finalMessage">
-                <button class="final-button" id="foreverButton">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                    </svg>
-                    <span>Forever Yours</span>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                    </svg>
-                </button>
+            <!-- Enhanced Final Message -->
+            <div class="final-message">
+                <div class="forever-section">
+                    <h2 class="forever-title">Forever & Always</h2>
+                    <p class="forever-text">
+                        Every breath I take, every heartbeat that echoes in my chest, every star that lights up the
+                        night sky -
+                        they all whisper your name. You are my universe, my reason for being, my eternal love story.
+                    </p>
+                    <p class="forever-text">
+                        This promise isn't just written in words, but carved into my soul. You are my yesterday, my
+                        today,
+                        and all of my tomorrows. No distance, no time, no force in this universe can change that.
+                    </p>
+                    <button class="final-button" id="foreverButton">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg>
+                        <span>Forever Yours</span>
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
 
-        <!-- Love Message Modal -->
+        <!-- Enhanced Love Message Modal -->
         <div class="love-message" id="loveMessage">
-            <button class="close-button" id="closeButton">&times;</button>
+            <button class="close-button" id="closeButton">×</button>
             <div class="love-message-content">
-                <h2 class="love-message-title">💕 My Promise to You 💕</h2>
+                <h2 class="love-message-title">💕 My Eternal Promise 💕</h2>
 
                 <div class="typewriter-text" id="typewriterText">
                     Tumhara saath, tumhara pyaar, yehi toh hai meri duniya...
                 </div>
 
-                <p class="love-message-text delay-100">
-                    <strong>Kavya,</strong> you are the light that brightens my darkest days.
-                    Every moment without you feels incomplete, like a song without its melody.
+                <p class="love-message-text">
+                    <strong>Kavya,</strong> you are the constellation that guides me through my darkest nights,
+                    the melody that gives rhythm to my heart, and the dream that makes my reality beautiful.
                 </p>
 
-                <p class="love-message-text delay-200">
-                    I promise to love you with all my heart, to cherish every smile you give me,
-                    to hold your hand through every storm, and to be the man you deserve.
+                <p class="love-message-text">
+                    Every sunrise reminds me of your smile, every sunset of your embrace.
+                    You are not just my love, but my home, my peace, and my greatest adventure.
                 </p>
 
-                <p class="love-message-text delay-300">
-                    <em>"Tere ishq mein main kho gaya hun,
-                        <br>Tere bina main adhoora hun,
-                        <br>Tu hai meri zindagi ka sahara,
-                        <br>Tujhse hi mera pyaar hai sara."</em>
+                <div class="promise-section">
+                    <h3 class="promise-title">My Sacred Promises</h3>
+                    <ul class="promise-list">
+                        <li class="promise-item">💝 To love you unconditionally, with all my flaws and all my heart</li>
+                        <li class="promise-item">🌟 To be your strength when you feel weak, your light when you feel
+                            lost</li>
+                        <li class="promise-item">🌹 To cherish every moment we share, from the simplest to the most
+                            extraordinary</li>
+                        <li class="promise-item">💫 To grow with you, learn with you, and build our dreams together</li>
+                        <li class="promise-item">❤️ To prove every day that you made the right choice in giving me your
+                            heart</li>
+                    </ul>
+                </div>
+
+                <p class="love-message-text">
+                    <em style="font-family: 'Dancing Script', cursive; font-size: 1.4rem; color: #ffd54f;">
+                        "Tere ishq mein main kho gaya hun,<br>
+                        Tere bina main adhoora hun,<br>
+                        Tu hai meri zindagi ka sahara,<br>
+                        Tujhse hi mera pyaar hai sara."
+                    </em>
                 </p>
 
-                <p class="love-message-text delay-400">
-                    This apology comes from the deepest part of my soul.
-                    I will spend every day proving that my love for you is real,
-                    eternal, and worth your forgiveness.
+                <p class="love-message-text">
+                    This apology comes from the deepest chambers of my soul, wrapped in the promise
+                    of a love that will only grow stronger with each passing day.
                 </p>
 
-                <p class="love-message-text delay-500" style="font-size: 1.5rem; color: #fbbf24; font-weight: bold;">
-                    Forever and Always Yours ❤️
+                <p class="love-message-text"
+                    style="font-size: 1.8rem; color: #ffd54f; font-weight: bold; font-family: 'Great Vibes', cursive;">
+                    Forever and Always Yours, My Beautiful Kavya ❤️✨
                 </p>
             </div>
         </div>
     </div>
 
     <script>
-        // Create floating hearts
-        function createFloatingHearts() {
-            const container = document.getElementById('floatingHearts');
-            for (let i = 0; i < 30; i++) {
-                const heart = document.createElement('div');
-                heart.className = `heart animate-float-${i % 3}`;
-                heart.innerHTML = `<svg width="${Math.random() * 25 + 10}" height="${Math.random() * 25 + 10}" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                </svg>`;
-                heart.style.left = Math.random() * 100 + '%';
-                heart.style.top = Math.random() * 100 + '%';
-                heart.style.animationDelay = Math.random() * 5 + 's';
-                heart.style.animationDuration = Math.random() * 3 + 2 + 's';
-                container.appendChild(heart);
-            }
-        }
+        // Custom cursor
+        const cursor = document.getElementById('cursor');
+        let mouseX = 0;
+        let mouseY = 0;
 
-        // Create floating sparkles
-        function createFloatingSparkles() {
-            const container = document.getElementById('floatingSparkles');
-            for (let i = 0; i < 25; i++) {
-                const star = document.createElement('div');
-                star.className = 'star animate-twinkle';
-                star.innerHTML = `<svg width="${Math.random() * 20 + 8}" height="${Math.random() * 20 + 8}" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="12 2 15.09 8.26 22 9 17 14.74 18.18 21.02 12 17.77 5.82 21.02 7 14.74 2 9 8.91 8.26 12 2"/>
-                </svg>`;
-                star.style.left = Math.random() * 100 + '%';
-                star.style.top = Math.random() * 100 + '%';
-                star.style.animationDelay = Math.random() * 3 + 's';
-                star.style.animationDuration = Math.random() * 2 + 1.5 + 's';
-                container.appendChild(star);
-            }
-        }
+        document.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
 
-        // Create shooting stars
-        function createShootingStars() {
-            const container = document.getElementById('shootingStars');
-            for (let i = 0; i < 5; i++) {
-                const shootingStar = document.createElement('div');
-                shootingStar.className = 'shooting-star animate-shooting-star';
-                shootingStar.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <polygon points="12 2 15.09 8.26 22 9 17 14.74 18.18 21.02 12 17.77 5.82 21.02 7 14.74 2 9 8.91 8.26 12 2"/>
-                </svg>`;
-                shootingStar.style.left = Math.random() * 100 + '%';
-                shootingStar.style.top = Math.random() * 100 + '%';
-                shootingStar.style.animationDelay = Math.random() * 10 + 's';
-                shootingStar.style.animationDuration = Math.random() * 2 + 3 + 's';
-                container.appendChild(shootingStar);
-            }
+        function updateCursor() {
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
+            requestAnimationFrame(updateCursor);
         }
+        updateCursor();
 
-        // Create magic particles
-        function createMagicParticles() {
-            const container = document.getElementById('magicParticles');
-            for (let i = 0; i < 20; i++) {
+        // Create enhanced floating particles
+        function createFloatingParticles() {
+            const container = document.getElementById('floatingParticles');
+            const particleTypes = ['heart', 'star', 'diamond'];
+
+            for (let i = 0; i < 50; i++) {
                 const particle = document.createElement('div');
-                particle.className = 'magic-particle animate-magic-sparkle';
-                particle.innerHTML = `<svg width="${Math.random() * 12 + 6}" height="${Math.random() * 12 + 6}" viewBox="0 0 24 24" fill="currentColor">
-                    <circle cx="12" cy="12" r="3"/>
-                </svg>`;
+                const type = particleTypes[Math.floor(Math.random() * particleTypes.length)];
+                particle.className = `particle particle-${type}`;
+
+                let svg;
+                switch (type) {
+                    case 'heart':
+                        svg = '<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>';
+                        break;
+                    case 'star':
+                        svg = '<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9 17 14.74 18.18 21.02 12 17.77 5.82 21.02 7 14.74 2 9 8.91 8.26 12 2"/></svg>';
+                        break;
+                    case 'diamond':
+                        svg = '<svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9l-5 4.74 1.18 6.28L12 17.77l-6.18 2.25L7 14.74 2 9l6.91-1.74L12 2z"/></svg>';
+                        break;
+                }
+
+                particle.innerHTML = svg;
                 particle.style.left = Math.random() * 100 + '%';
                 particle.style.top = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 4 + 's';
-                particle.style.animationDuration = Math.random() * 2 + 2.5 + 's';
+                particle.style.animationDelay = Math.random() * 10 + 's';
+                particle.style.animationDuration = Math.random() * 8 + 6 + 's';
+
                 container.appendChild(particle);
             }
         }
 
-        // Create burst effect
+        // Enhanced burst effect
         function createBurstEffect(x, y) {
             const container = document.getElementById('burstContainer');
-            const colors = ['#fbbf24', '#f472b6', '#8b5cf6', '#ec4899', '#c084fc'];
+            const colors = ['#ff6b9d', '#c44cf0', '#4fc3f7', '#ffd54f', '#81c784'];
 
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 30; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'burst-particle';
                 particle.style.left = x + 'px';
                 particle.style.top = y + 'px';
                 particle.style.background = colors[Math.floor(Math.random() * colors.length)];
 
-                const angle = (Math.PI * 2 * i) / 20;
-                const velocity = Math.random() * 100 + 50;
+                const angle = (Math.PI * 2 * i) / 30;
+                const velocity = Math.random() * 150 + 100;
                 const finalX = x + Math.cos(angle) * velocity;
                 const finalY = y + Math.sin(angle) * velocity;
 
@@ -1191,35 +1353,36 @@
 
                 setTimeout(() => {
                     particle.remove();
-                }, 1000);
+                }, 1500);
             }
         }
 
-        // Animate sections on scroll/load
-        function animateSections() {
-            const sections = [
-                'header',
-                'photoSection',
-                'shayariSection',
-                'apologySection',
-                'finalMessage'
-            ];
+        // Ripple effect
+        function createRipple(e) {
+            const button = e.currentTarget;
+            const rect = button.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
 
-            sections.forEach((sectionId, index) => {
-                setTimeout(() => {
-                    const section = document.getElementById(sectionId);
-                    if (section) {
-                        section.classList.add('visible');
-                    }
-                }, index * 500);
-            });
+            const ripple = document.createElement('div');
+            ripple.className = 'ripple';
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+
+            button.appendChild(ripple);
+
+            setTimeout(() => {
+                ripple.remove();
+            }, 600);
         }
 
         // Enhanced typewriter effect
         function typeWriter(element, text, speed = 100) {
             let i = 0;
             element.innerHTML = '';
-            element.style.borderRight = '2px solid #fbb6ce';
+            element.style.borderRight = '3px solid #ff6b9d';
 
             function type() {
                 if (i < text.length) {
@@ -1235,60 +1398,53 @@
             type();
         }
 
-        // Initialize everything when page loads
+        // Initialize everything
         document.addEventListener('DOMContentLoaded', function () {
-            createFloatingHearts();
-            createFloatingSparkles();
-            createShootingStars();
-            createMagicParticles();
+            createFloatingParticles();
 
-            // Start animations after a short delay
-            setTimeout(animateSections, 500);
-
-            // Add continuous particle creation
-            setInterval(createShootingStars, 15000);
-            setInterval(createMagicParticles, 10000);
+            // Refresh particles periodically
+            setInterval(createFloatingParticles, 20000);
         });
 
-        // Enhanced Forever Yours button functionality
+        // Enhanced Forever Yours button
         document.getElementById('foreverButton').addEventListener('click', function (e) {
             const button = this;
             const rect = button.getBoundingClientRect();
             const x = rect.left + rect.width / 2;
             const y = rect.top + rect.height / 2;
 
-            // Create burst effect
+            createRipple(e);
             createBurstEffect(x, y);
 
-            // Add button animation
-            button.style.transform = 'scale(1.2)';
+            // Enhanced button animation
+            button.style.transform = 'scale(1.2) rotate(5deg)';
             setTimeout(() => {
-                button.style.transform = 'scale(1)';
-            }, 200);
+                button.style.transform = 'scale(1) rotate(0deg)';
+            }, 300);
 
-            // Show love message
+            // Show enhanced love message
             const loveMessage = document.getElementById('loveMessage');
             loveMessage.classList.add('show');
 
-            // Start typewriter effect
+            // Enhanced typewriter effect
             setTimeout(() => {
                 const typewriterElement = document.getElementById('typewriterText');
-                typeWriter(typewriterElement, 'Tumhara saath, tumhara pyaar, yehi toh hai meri duniya...', 80);
+                typeWriter(typewriterElement, 'Tumhara saath, tumhara pyaar, yehi toh hai meri duniya...', 60);
             }, 1000);
 
-            // Create floating hearts on button click
-            for (let i = 0; i < 10; i++) {
+            // Create floating hearts
+            for (let i = 0; i < 20; i++) {
                 setTimeout(() => {
                     const heart = document.createElement('div');
-                    heart.innerHTML = `<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="color: #f472b6;">
+                    heart.innerHTML = `<svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" style="color: #ff6b9d;">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
                     </svg>`;
                     heart.style.position = 'fixed';
-                    heart.style.left = (x - 10) + 'px';
-                    heart.style.top = (y - 10) + 'px';
+                    heart.style.left = (x - 12) + 'px';
+                    heart.style.top = (y - 12) + 'px';
                     heart.style.pointerEvents = 'none';
                     heart.style.zIndex = '999';
-                    heart.className = 'animate-floating-up';
+                    heart.style.animation = 'love-burst 2s ease-out forwards';
 
                     document.body.appendChild(heart);
 
@@ -1312,28 +1468,56 @@
             }
         });
 
-        // Add smooth scrolling behavior
-        document.documentElement.style.scrollBehavior = 'smooth';
-
-        // Add mouse follow effect for sparkles
+        // Mouse trail effect
         document.addEventListener('mousemove', function (e) {
-            if (Math.random() < 0.1) {
+            if (Math.random() < 0.05) {
                 const sparkle = document.createElement('div');
-                sparkle.innerHTML = `<svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor" style="color: #fbbf24;">
+                sparkle.innerHTML = `<svg width="8" height="8" viewBox="0 0 24 24" fill="currentColor" style="color: #ffd54f;">
                     <polygon points="12 2 15.09 8.26 22 9 17 14.74 18.18 21.02 12 17.77 5.82 21.02 7 14.74 2 9 8.91 8.26 12 2"/>
                 </svg>`;
                 sparkle.style.position = 'fixed';
                 sparkle.style.left = e.clientX + 'px';
                 sparkle.style.top = e.clientY + 'px';
                 sparkle.style.pointerEvents = 'none';
-                sparkle.style.zIndex = '1';
-                sparkle.className = 'animate-sparkle';
+                sparkle.style.zIndex = '3';
+                sparkle.style.animation = 'sparkle-dance 1s ease-out forwards';
 
                 document.body.appendChild(sparkle);
 
                 setTimeout(() => {
                     sparkle.remove();
-                }, 1500);
+                }, 1000);
+            }
+        });
+
+        // Smooth scrolling
+        document.documentElement.style.scrollBehavior = 'smooth';
+
+        // Add click sound effect (visual feedback)
+        document.addEventListener('click', function (e) {
+            if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
+                const rect = e.target.getBoundingClientRect();
+                const x = rect.left + rect.width / 2;
+                const y = rect.top + rect.height / 2;
+
+                const flash = document.createElement('div');
+                flash.style.position = 'fixed';
+                flash.style.left = x + 'px';
+                flash.style.top = y + 'px';
+                flash.style.width = '100px';
+                flash.style.height = '100px';
+                flash.style.background = 'radial-gradient(circle, rgba(255,107,157,0.8) 0%, transparent 70%)';
+                flash.style.borderRadius = '50%';
+                flash.style.pointerEvents = 'none';
+                flash.style.zIndex = '9999';
+                flash.style.animation = 'love-burst 0.5s ease-out forwards';
+                flash.style.transform = 'translate(-50%, -50%)';
+
+                document.body.appendChild(flash);
+
+                setTimeout(() => {
+                    flash.remove();
+                }, 500);
             }
         });
     </script>
